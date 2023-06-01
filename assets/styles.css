@@ -765,7 +765,7 @@ section {
     align-items: center;
     flex-wrap: wrap;
     padding: 2rem 9%;
-    background: var(--bg-color);
+    background: var(--second-bg-color);
 }
 
 .footer-text,
@@ -830,6 +830,7 @@ section {
 .logo .animated,
 .navbar .animated,
 #menu-icon .animated,
+.footer .animated,
 .home.show-animated .animated {
     animation: showRigth 1s ease forwards;
     animation-delay: calc(.3s * var(--i));
@@ -841,7 +842,8 @@ section {
     animation: none;
 }
 
-section:nth-child(odd) .animated.scroll {
+section:nth-child(odd) .animated.scroll,
+.footer .animated.scroll {
     background: var(--second-bg-color);
 }
 
