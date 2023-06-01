@@ -656,10 +656,29 @@ section {
     width: 95%;
 }
 
+/* Estilos sección desarrollos */
+.desarrollos {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.desarrollos img {
+    opacity: 0.5;
+}
+
+.contenedor-img {
+    position: relative;
+}
+
 /* Estilos sección contacto */
 .contact {
     min-height: auto;
     padding-bottom: 7rem;
+    background: var(--second-bg-color);
 }
 
 .contact h2 {
@@ -744,7 +763,7 @@ section {
     align-items: center;
     flex-wrap: wrap;
     padding: 2rem 9%;
-    background: var(--second-bg-color);
+    background: var(--bg-color);
 }
 
 .footer-text,
@@ -820,8 +839,7 @@ section {
     animation: none;
 }
 
-section:nth-child(odd) .animated.scroll,
-.footer .animated.scroll {
+section:nth-child(odd) .animated.scroll {
     background: var(--second-bg-color);
 }
 
@@ -833,6 +851,7 @@ section:nth-child(odd) .animated.scroll,
 .education.show-animated .animated.scroll,
 .skills.show-animated .animated.scroll,
 .contact.show-animated .animated.scroll,
+.desarrollos.show-animated .animated.scroll,
 .footer.show-animated .animated.scroll {
     transition-delay: calc(.3s * var(--i));
     width: 0;
