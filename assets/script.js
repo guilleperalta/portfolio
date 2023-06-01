@@ -15,11 +15,12 @@ let navLinks = document.querySelectorAll('header nav a');
 
 window.onscroll = () => {
     section.forEach(sec => {
-        let top = window.scrollY;
-        let offset = sec.offsetTop - 400;
+        // let top = window.scrollY;
+        let top = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        let anchoViewport = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        let offset = anchoViewport < 700 ? sec.offsetTop - 700 : sec.offsetTop - 400;
         let height = sec.offsetHeight;
         let id = sec.getAttribute('id');
-
         if(top >= offset && top < offset + height) {
             // active navbar links
             navLinks.forEach(links => {

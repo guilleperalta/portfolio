@@ -43,7 +43,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     padding: 2rem 9%;
     /* background: transparent; */
     display: flex;
@@ -90,7 +90,6 @@ body {
     color: var(--text-color);
     cursor: pointer;
     display: none;
-    right: 20vw;
 }
 
 section {
@@ -666,12 +665,14 @@ section {
     gap: 5rem;
 }
 
-.desarrollos img {
-    opacity: 0.5;
-}
-
 .contenedor-img {
     position: relative;
+    width: 95vw;
+}
+
+.desarrollos img {
+    opacity: 0.5;
+    width: 100%;
 }
 
 /* Estilos sección contacto */
@@ -817,10 +818,10 @@ section {
 /* Animaciones de recarga y scroll */
 .animated {
     position: absolute;
-    top: -1px;
-    right: -1px;
-    width: 102%;
-    height: 102%;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
     background: var(--bg-color);
     z-index: 98;
 }
@@ -872,7 +873,7 @@ section:nth-child(odd) .animated.scroll {
     .home-image img {
         top: 50%;
         left: 50%;
-        width: 140vw;
+        width: 90vw;
         transform: translate(-50% , -50%);
         filter: opacity(0.1) !important;
     }
