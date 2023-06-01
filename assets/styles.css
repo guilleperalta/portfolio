@@ -985,10 +985,16 @@ section:nth-child(odd) .animated.scroll {
 
     .home-content .text-animated h3 {
         font-size: 2.5rem;
+        background-position: -44rem 0;
     }
 
     .home-content .text-animated {
-        width: 90%;
+        width: 44rem;
+    }
+
+    .home.show-animated .home-content .text-animated h3 {
+        animation: homeBgTextmb 4s linear infinite;
+        animation-delay: 2s;
     }
 }
 
@@ -1030,6 +1036,19 @@ section:nth-child(odd) .animated.scroll {
     10%,
     100% {
         background-position: -55rem 0;
+    }
+
+    65%,
+    85% {
+        background-position: 0 0;
+    }
+}
+
+@keyframes homeBgTextmb {
+    0%,
+    10%,
+    100% {
+        background-position: -44rem 0;
     }
 
     65%,
