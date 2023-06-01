@@ -90,6 +90,7 @@ body {
     color: var(--text-color);
     cursor: pointer;
     display: none;
+    right: 20vw;
 }
 
 section {
@@ -162,6 +163,10 @@ section {
     position: relative;
     font-size: 1.6rem;
     margin: 2rem 0 4rem;
+}
+
+.home-image {
+    z-index: -5;
 }
 
 .home-image img {
@@ -569,9 +574,9 @@ section {
     gap: 2rem;
 }
 
-.skills-content .progress {
-    /* padding: 1rem 0; */
-}
+/* .skills-content .progress {
+    /* padding: 1rem 0;
+} */
 
 .skills-content .progress h3 {
     font-size: 1.5rem;
@@ -846,7 +851,11 @@ section:nth-child(odd) .animated.scroll,
     }
 
     .home-image img {
-        display: none;
+        top: 50%;
+        left: 50%;
+        width: 140vw;
+        transform: translate(-50% , -50%);
+        filter: opacity(0.1) !important;
     }
 
     section {
@@ -952,6 +961,14 @@ section:nth-child(odd) .animated.scroll,
 
     .contact form .input-box .input-field {
         width: 100%;
+    }
+
+    .home-content .text-animated h3 {
+        font-size: 2.5rem;
+    }
+
+    .home-content .text-animated {
+        width: 90%;
     }
 }
 
