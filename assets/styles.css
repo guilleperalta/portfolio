@@ -936,7 +936,7 @@ input:checked+.slider:before {
 @media (min-width: 991px) {
     .switch {
         position: absolute;
-        right: 2.6rem;
+        right: 3rem;
         top: 2.6rem;
     }
 }
