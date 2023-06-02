@@ -64,6 +64,14 @@ body {
     text-decoration: none;
     font-weight: 600;
     z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo img {
+    width: 3rem;
 }
 
 .navbar {
@@ -925,6 +933,13 @@ input:checked+.slider:before {
 }
 
 /* Todos los media querys */
+@media (min-width: 991px) {
+    .switch {
+        position: absolute;
+        right: 2.6rem;
+        top: 2.6rem;
+    }
+}
 @media (max-width : 1200px) {
     html {
         font-size: 55%;
@@ -1071,7 +1086,11 @@ input:checked+.slider:before {
         margin-top: 3rem;
     }
     .navbar {
-        display: block;
+        display: flex;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding-bottom: 10rem;
     }
 }
 
