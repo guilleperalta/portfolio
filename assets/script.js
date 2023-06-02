@@ -48,3 +48,40 @@ window.onscroll = () => {
 
     footer.classList.toggle('show-animated', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
 }
+
+// Funcion para cambiar los colores de toda la pagina
+// document.querySelector('#darkMode').addEventListener('click',()=>{
+//     if (darkMode){
+//         root.style.setProperty('--bg-color', '#e5e5e5');
+//         root.style.setProperty('--second-bg-color', '#efefef');
+//         root.style.setProperty('--text-color', '#121212');
+//         root.style.setProperty('--main-color', '#00638b');
+//         darkMode = !darkMode;
+//     }else{
+//         root.style.setProperty('--bg-color', '#081b29');
+//         root.style.setProperty('--second-bg-color', '#112e42');
+//         root.style.setProperty('--text-color', '#ededed');
+//         root.style.setProperty('--main-color', '#00abf0');
+//         darkMode = !darkMode;
+//     }
+// });
+
+
+let darkModeToggle = document.querySelector('#darkModeToggle');
+let root = document.documentElement;
+let darkMode = true;
+darkModeToggle.addEventListener('click', ()=>{
+    if (darkMode){
+        root.style.setProperty('--bg-color', '#e5e5e5');
+        root.style.setProperty('--second-bg-color', '#efefef');
+        root.style.setProperty('--text-color', '#121212');
+        root.style.setProperty('--main-color', '#00638b');
+        darkMode = !darkMode;
+    }else{
+        root.style.setProperty('--bg-color', '#081b29');
+        root.style.setProperty('--second-bg-color', '#112e42');
+        root.style.setProperty('--text-color', '#ededed');
+        root.style.setProperty('--main-color', '#00abf0');
+        darkMode = !darkMode;
+    }
+});

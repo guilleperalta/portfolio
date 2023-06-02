@@ -392,7 +392,7 @@ section {
 
 .link-site {
     text-decoration: none;
-    color: #00abf0;
+    color: var(--main-color);
 }
 
 /* Estilos sección Educacion */
@@ -437,6 +437,11 @@ section {
 
 .education-box .education-content {
     position: relative;
+}
+
+.education-box.work {
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 .education-box.work .education-content::before {
@@ -600,7 +605,7 @@ section {
     display: block;
     height: 100%;
     border-radius: .2rem;
-    background: #00acf083;
+    background: var(--main-color);
 }
 
 .skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span {
@@ -824,10 +829,10 @@ section {
 /* Animaciones de recarga y scroll */
 .animated {
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
+    top: -3%;
+    right: -3%;
+    width: 106%;
+    height: 106%;
     background: var(--bg-color);
     z-index: 98;
 }
@@ -864,6 +869,55 @@ section:nth-child(odd) .animated.scroll,
 .footer.show-animated .animated.scroll {
     transition-delay: calc(.3s * var(--i));
     width: 0;
+}
+
+/* Aca agregamos todo para el boton de darkMode */
+.switch {
+    position: fixed;
+    right: 2.5rem;
+    top: 2.8rem;
+    width: 50px;
+    height: 24px;
+    margin-left: 2rem;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--main-color);
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: var(--second-bg-color);
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: var(--main-color);
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+    background-color: var(--second-bg-color);
 }
 
 /* Todos los media querys */
@@ -1011,6 +1065,14 @@ section:nth-child(odd) .animated.scroll,
 
     .footer-iconTop.redes {
         margin-top: 3rem;
+    }
+    
+    .switch {
+        position: fixed;
+        right: 10rem;
+        top: 2.2rem;
+        width: 50px;
+        height: 24px;
     }
 }
 
