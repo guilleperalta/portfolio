@@ -936,7 +936,7 @@ input:checked+.slider:before {
 @media (min-width: 991px) {
     .switch {
         position: absolute;
-        right: 3rem;
+        right: 4rem;
         top: 2.6rem;
     }
 }
@@ -1091,6 +1091,18 @@ input:checked+.slider:before {
         flex-direction: column;
         justify-content: space-evenly;
         padding-bottom: 20rem;
+    }
+    
+    a.logo {
+        order: 2;
+    }
+    
+    div#menu-icon {
+        order: 1;
+    }
+    
+    label.switch {
+        order: 3;
     }
 }
 
