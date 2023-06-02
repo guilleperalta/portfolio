@@ -1090,7 +1090,7 @@ input:checked+.slider:before {
         height: 100vh;
         flex-direction: column;
         justify-content: space-evenly;
-        padding-bottom: 10rem;
+        padding-bottom: 20rem;
     }
 }
 
